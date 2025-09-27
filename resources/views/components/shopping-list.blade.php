@@ -1,0 +1,23 @@
+<div>
+    {{$data}}
+    <table>
+        <thead>
+        <tr>
+            <th>{{__('Item')}}</th>
+            <th>{{__('Quantity')}}</th>
+            <th>{{__('Price')}}</th>
+            <th>{{__('Acquired')}}</th>
+            <th>{{__('Actions')}}</th>
+        </tr>
+        </thead>
+        @foreach($data as $item)
+            <tr>
+                <td>{{$item->name}}</td>
+                <td>{{$item->price}}</td>
+                <td>{{$item->price}}</td>
+                <td>{{$item->acquired}}</td>
+                <td>inputs</td>
+            </tr>
+        @endforeach
+    </table>
+</div>
