@@ -1,6 +1,6 @@
 <div>
-    {{$data}}
-    <table>
+
+    <table class="table-auto">
         <thead>
         <tr>
             <th>{{__('Item')}}</th>
@@ -10,14 +10,16 @@
             <th>{{__('Actions')}}</th>
         </tr>
         </thead>
-        @foreach($data as $item)
+        <tbody>
+        @foreach($data->listItems as $item)
             <tr>
-                <td>{{$item->name}}</td>
-                <td>{{$item->price}}</td>
-                <td>{{$item->price}}</td>
+                <td>{{$item->item->name}}</td>
+                <td>{{$item->item->price}}</td>
+                <td>{{$item->quantity}}</td>
                 <td>{{$item->acquired}}</td>
                 <td>inputs</td>
             </tr>
         @endforeach
+        </tbody>
     </table>
 </div>

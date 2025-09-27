@@ -9,7 +9,7 @@ class ShoppingListController extends Controller
 {
     public function index() {
 
-        $list = Auth::user()->ShoppingLists()->get();
+        $list = Auth::user()->ShoppingList()->first();
         return view('dashboard')->with(['lists' => $list]);
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignIdFor(ShoppingList::class);
             $table->foreignIdFor(Item::class);
             $table->boolean('acquired')->default(false);
-            $table->integer('quantity')->default(false);
+            $table->integer('quantity')->default(1);
             $table->timestamps();
         });
     }

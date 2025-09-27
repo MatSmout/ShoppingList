@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ListItem extends Model
+{
+    public $table = 'lists_items';
+
+    public function shoppingList() {
+        return $this->belongsTo(ShoppingList::class);
+    }
+
+    public function item() {
+        return $this->belongsTo(Item::class);
+    }
+}

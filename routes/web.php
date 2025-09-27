@@ -11,7 +11,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])
     ->group(function () {
-        Route::get('/dashboard', [ShoppingListController::class, 'index']);
+        Route::get('/dashboard', [ShoppingListController::class, 'index'])->name('dashboard');
     });
 
 Route::middleware(['auth'])->group(function () {
