@@ -60,7 +60,7 @@ class User extends Authenticatable
             ->implode('');
     }
 
-    public function ShoppingList(): HasOne
+    public function shoppingList(): HasOne
     {
         return $this->hasOne(ShoppingList::class);
     }
