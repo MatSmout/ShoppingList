@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('shopping_lists', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
+            $table->float('budget')->nullable()->default(null);
             $table->timestamps();
         });
     }
