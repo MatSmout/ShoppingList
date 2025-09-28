@@ -1,3 +1,5 @@
+### Hours Spent : 2
+
 # INSTALLATION GUIDE
 
 ## Requirements 
@@ -13,3 +15,4 @@ NPM
 5. run `docker compose up -d`
 6. inside the docker container you will need to run `php artisan migrate && php artisan db:seed`
 
+Added in backend for factories/models/livewire/controllers and functions to achieve the requirements missing the frontend inputs
